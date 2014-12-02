@@ -5,4 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_many :collections
   has_many :posts
+  validates_associated :collections
+  validates_associated :posts
+  validates :name, presence: true, uniqueness: true
 end
