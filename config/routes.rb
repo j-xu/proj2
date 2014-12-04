@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   	resources :collections
   end
   resources :posts
-  patch 'collectionize/:id', to: 'collections#collectionize', as: 'collectionize'
+  patch 'collectionize/:id', to: 'posts#collectionize', as: 'collectionize'
 end

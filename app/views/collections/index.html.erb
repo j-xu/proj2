@@ -1,5 +1,5 @@
 <h2>Choose a Collection</h2>
 
 <% @user.collections.each do |c| %>
-	<p><%= link_to c.name, user_collection_path(id: c.id) %></p>
+	<p><%= link_to c.name, collectionize_path(id: @post.id, post_id: c.id), :method => :patch %></p>
 <% end %>

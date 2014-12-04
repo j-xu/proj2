@@ -38,6 +38,12 @@ class PostsController < ApplicationController
 		end
 	end
 
+	def collectionize
+		@post = Post.find params[:id]
+		@post.update_attribute(:collection_id, params[:post_id])
+		redirect_to @post.user
+	end
+
 	private
 
 	def post_params

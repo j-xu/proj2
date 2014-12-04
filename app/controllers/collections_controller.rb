@@ -12,5 +12,6 @@ class CollectionsController < ApplicationController
 	def index
 		@user = User.find params[:user_id]
 		@collection = @user.collections
+		@post = Post.find params[:post_id]
 	end
 end
