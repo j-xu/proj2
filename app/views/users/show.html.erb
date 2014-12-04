@@ -1,3 +1,9 @@
 <h3>User</h3>
 <p>Name: <%= @user.name if @user.name %></p>
 <p>Email: <%= @user.email if @user.email %></p>
+<% @user.collections.each do |collection| %>
+	<p><%= collection.name %></p>
+<% end %>
+<% @user.posts.each do |post| %>
+	<p><%= post.body %> <%= link_to 'Edit', edit_post_path(post) %></p>
+<% end %>

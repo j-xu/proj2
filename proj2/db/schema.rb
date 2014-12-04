@@ -11,34 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141202095520) do
-
-  create_table "articles", force: true do |t|
-    t.string   "title"
-    t.text     "text"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "collections", force: true do |t|
-    t.string   "name"
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "collections", ["user_id"], name: "index_collections_on_user_id"
-
-  create_table "posts", force: true do |t|
-    t.text     "body"
-    t.integer  "user_id"
-    t.integer  "collection_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "posts", ["collection_id"], name: "index_posts_on_collection_id"
-  add_index "posts", ["user_id"], name: "index_posts_on_user_id"
+ActiveRecord::Schema.define(version: 20141120071010) do
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
