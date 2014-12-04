@@ -7,14 +7,27 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 u = User.create! name: 'Douglas', email: 'douglas@douglas.com', password: 'password'
-c1 = u.collections.create! name: 'collection1'
-c2 = u.collections.create! name: 'collection2'
-c1.posts.create! body: 'collections post yay!'
-c1.posts.create! body: 'more collections posts!'
-c2.posts.create! body: 'I like collections'
-c2.posts.create! body: "I don't like collections"
-u.posts.create! body: 'post1 lalala'
-u.posts.create! body: 'post2 lalala'
+c1 = u.collections.create! name: 'Not That Bitter'
+c2 = u.collections.create! name: 'Kind of Bitter'
+c3 = u.collections.create! name: 'Bitter'
+c4 = u.collections.create! name: 'Super Bitter'
+c1.posts.create! body: 'Life is okay'
+c1.posts.create! body: "I didn't trip today"
+c3.posts.create! body: 'I ran into a car'
+c3.posts.create! body: 'A car ran into me'
+c3.posts.create! body: 'I fell onto a car'
+c3.posts.create! body: 'A car fell onto me'
+c3.posts.create! body: "I ran over a car"
+c3.posts.create! body: "A car ran over me"
+u.posts.create! body: "Wow I'm so bitter"
+u.posts.create! body: 'I should bitter blog today'
+u.posts.create! body: 'Bitter blogger bit a batter'
+u.posts.create! body: 'Lalalala'
+u.posts.create! body: 'Bitter. Yes.'
+u.posts.create! body: 'Walalala'
+u.posts.create! body: 'Cool'
+
+
 
 u = User.create! name: 'Joanne', email: 'joanne@joanne.com', password: 'password'
 

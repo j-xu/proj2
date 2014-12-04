@@ -6,6 +6,7 @@ class PostsController < ApplicationController
 	def update
 		@post = Post.find params[:id]
 		if @post.update post_params
+			flash[:success] = 'Updated!'
 			redirect_to @post.user
 		else
 			render 'edit'
@@ -30,6 +31,7 @@ class PostsController < ApplicationController
 	def show
 		@post = Post.find params[:id]
 		if @post.destroy
+			flash[:success] = 'Deleted!'
 			redirect_to @post.user
 		else
 			render 'destroy'
