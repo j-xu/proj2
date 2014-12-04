@@ -1,9 +1,10 @@
 <h1><%= @user.name if @user.name %></h1>
 <h4><%= link_to 'Create new post', new_post_path(user_id: @user.id) %></h4>
+<h4><%= link_to 'Create new collection', new_user_collection_path(user_id: @user.id) %></h4>
 
 <h3> Collections</h3>
 <% @user.collections.each do |collection| %>
-	<p><%= collection.name %></p>
+	<p><%= link_to collection.name, user_collection_path(user_id: @user.id, collection_id: collection.id) %></p>
 <% end %>
 <h3> Posts</h3>
 <% @user.posts.each do |post| %>
