@@ -40,6 +40,15 @@ class CollectionsController < ApplicationController
 		end
 	end
 
+	# def destroy
+	# 	@collection = Collection.find params[:id]
+	# 	@collection.posts.each do |post|
+	# 		post.destroy
+	# 	end
+	# 	flash[:success] = 'Deleted!'
+	# 	redirect_to @post.user
+	# end
+
 	private
 
 	def collection_params

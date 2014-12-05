@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :collections
   resources :posts
   patch 'collectionize/:id', to: 'posts#collectionize', as: 'collectionize'
+  delete 'collections/:id', to: 'collections#destroy', as: 'delete_collection_path'
 end
