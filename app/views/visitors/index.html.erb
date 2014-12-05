@@ -1,2 +1,9 @@
-<h3>Welcome</h3>
-<p><%= link_to 'Users:', users_path %> <%= User.count %> registered</p>
+<h2>Welcome</h2>
+
+<% @post.each do |post| %>
+	<h3><%= User.find(post.user_id).name %></h3>
+	<% if post.collection_id != nil %>
+		<h4><%= Collection.find(post.collection_id).name %></h4>
+	<% end %>
+	<p><%= post.body %></p>
+<% end %>
