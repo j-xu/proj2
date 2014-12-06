@@ -1,50 +1,35 @@
-Rails Devise
-================
+Title: Bitter Blog
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+Team Members: Douglas Kim, Joanne Xu
 
-This application was generated with the [rails_apps_composer](https://github.com/RailsApps/rails_apps_composer) gem
-provided by the [RailsApps Project](http://railsapps.github.io/).
+Demo Link:
 
-Rails Composer is open source and supported by subscribers. Please join RailsApps to support development of Rails Composer.
+Idea: Like Twitter but bitter. Users can post their lamentations, group their posts into collections, and browse the most recent pessimisms of fellow lamenters on the homepage.
 
-Problems? Issues?
------------
+Models and Description:
 
-Need help? Ask on Stack Overflow with the tag 'railsapps.'
+User
 
-Your application contains diagnostics in the README file. Please provide a copy of the README file when reporting any issues.
+ - has name, email, password
+ - has many posts and collections
 
-If the application doesn’t work as expected, please [report an issue](https://github.com/RailsApps/rails_apps_composer/issues)
-and include the diagnostics.
+Post
+ - has body text
+ - belongs to user and can belong to collection as well
 
-Ruby on Rails
--------------
+Collection
+ - has name
+ - belongs to user and has many posts
 
-This application requires:
+Features:
+ - Users can log in
+ - Users can make posts
+ - Users can make collections and put posts into them
+ - Users can make standalone posts (without putting them in collections)
+ - Most recent posts can be seen in homepage
 
-- Ruby 2.1.2
-- Rails 4.1.5
+Division of Labor:
 
-Learn more about [Installing Rails](http://railsapps.github.io/installing-rails.html).
+Douglas: controllers, views, pagination, styling of homepage, heroku deployment, demo
 
-Getting Started
----------------
-
-Documentation and Support
--------------------------
-
-Issues
--------------
-
-Similar Projects
-----------------
-
-Contributing
-------------
-
-Credits
--------
-
-License
--------
+Joanne: model associations, controllers, test writing, this writeup

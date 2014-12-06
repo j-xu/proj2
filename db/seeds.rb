@@ -35,8 +35,8 @@ c3 = u.collections.create! name: 'Bitter Fruits'
 c1.posts.create! body: 'Did that just happen?', user_id: 2
 c2.posts.create! body: 'Feeling a little bitter', user_id: 2
 u.posts.create! body: "Bitter low right now"
-u.posts.create! body: 'Time to bitter blog!!'
-u.posts.create! body: 'Bitter me not please'
+c1.posts.create! body: 'Time to bitter blog!!', user_id: 2
+c2.posts.create! body: 'Bitter me not please', user_id: 2
 
 u = User.create! name: 'Wonjun', email: 'wonjun@wonjun.com', password: 'password'
 c1 = u.collections.create! name: 'Bitterest'
