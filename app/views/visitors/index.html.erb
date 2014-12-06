@@ -1,9 +1,19 @@
 <h2>Welcome</h2>
 
-<% @post.each do |post| %>
-	<h3><%= User.find(post.user_id).name %></h3>
-	<% if post.collection_id != nil %>
-		<h4><%= Collection.find(post.collection_id).name %></h4>
-	<% end %>
-	<p><%= post.body %></p>
+<%= paginate @post %>
+
+<% @post.in_groups_of(1) do |group| %>
+	<div class-"row">
+		<% group.compact.each do |post| %>
+			<div class="col-md-4">
+				<h3><%= User.find(post.user_id).name %></h3>
+				<% str = post.created_at %>
+				<p><%= str %></p>
+				<% if post.collection_id != nil %>
+					<h4><%= Collection.find(post.collection_id).name %></h4>
+				<% end %>
+				<p><%= post.body %></p>
+			</div>
+		<% end %>
+	</div>
 <% end %>
