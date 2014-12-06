@@ -2,10 +2,10 @@
 
 one:
   body: MyText
-  user_id: 
-  collection_id: 
+  user_id: 4
+  collection_id: 11
 
 two:
   body: MyText
-  user_id: 
+  user_id: 5
   collection_id: 
